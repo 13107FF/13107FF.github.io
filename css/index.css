@@ -30,7 +30,12 @@ body {
   src: url("/fonts/MaturaMTScriptCapitals.ttf"); }
 
 @font-face {
-  font-family: 'Constantia'; }
+  font-family: "方正细雅宋_GBK";
+  src: url("/fonts/FZXIYSK.TTF"); }
+
+@font-face {
+  font-family: '造字工房言宋体（非商用）';
+  src: url("/fonts/MFYanSong_Noncommercial-Regular_0.ttf"); }
 
 @font-face {
   font-family: 'iconfont';
@@ -244,7 +249,7 @@ body {
     line-height: 40px;
     margin-bottom: 10px;
     font-weight: 600;
-    font-family: "造字工房言宋体（非商用）","Constantia"; }
+    font-family: "Constantia","造字工房言宋体（非商用）"; }
   .article > .sub {
     opacity: .5;
     margin-bottom: 20px; }
@@ -263,7 +268,8 @@ body {
       overflow: auto;
       padding: 0;
       color: #333;
-      font-size: 13px;
+      font-size: 14px;
+      font-family: "Consolas";
       background: #f8f8f8; }
       .article > .content pre .gutter, .article > .content .highlight .gutter {
         text-align: right; }
