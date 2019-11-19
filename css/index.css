@@ -269,7 +269,7 @@ body {
       padding: 0;
       color: #333;
       font-size: 14px;
-      font-family: "Consolas";
+      font-family: "Courier New";
       background: #f8f8f8; }
       .article > .content pre .gutter, .article > .content .highlight .gutter {
         text-align: right; }
