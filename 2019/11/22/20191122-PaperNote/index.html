@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>【可视化Task1】论文阅读*3 | PHOSPHENE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ST-MVL 遥感时序数据插值OverviewSpatio-temporal multiview-based learning method 基于时空多视图的学习方法 考虑：  同一时序数据中不同时间戳的读数之间的时间相关性 不同时序数据之间的空间相关性  结合了：  由反距离加权插值和简单指数平滑组成的经验统计模型 特定的数据驱动算法  NMF 非负矩阵分解 block missing是极端情况">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【可视化Task1】论文阅读*3">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;index.html">
+<meta property="og:site_name" content="PHOSPHENE">
+<meta property="og:description" content="ST-MVL 遥感时序数据插值OverviewSpatio-temporal multiview-based learning method 基于时空多视图的学习方法 考虑：  同一时序数据中不同时间戳的读数之间的时间相关性 不同时序数据之间的空间相关性  结合了：  由反距离加权插值和简单指数平滑组成的经验统计模型 特定的数据驱动算法  NMF 非负矩阵分解 block missing是极端情况">
+<meta property="og:locale" content="ch">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;ST-MVL.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;IDW.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;SES.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;sim.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;UCF.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;simt.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;ICF.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;multiview.png">
+<meta property="og:updated_time" content="2019-11-22T03:22:26.295Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;ST-MVL.png">
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
+  <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+<body style="
+
+
+  background-color: #9cadaf
+
+">
+  <div id="container">
+    <nav id="nav">
+  <header class="header">
+    <a href="/" class="title">PHOSPHENE</a>
+  </header>
+  <div class="ctnWrap">
+    <div class="icons">
+      
+    </div>
+    <div class="menu">
+      
+        
+            <a href="/" class="nav-menu ">HOME</a>
+          
+        
+            <a href="/archives" class="nav-menu ">ARCHIVE</a>
+          
+        
+            <a href="/categories" class="nav-menu ">CATEGORIES</a>
+          
+        
+            <a href="/about" class="nav-menu ">ABOUT</a>
+          
+        
+      
+    </div>
+  </div>
+</nav>
+    <div id="main"><section class="article">
+  <h2 class="title">【可视化Task1】论文阅读*3</h2>
+  <p class="sub">Nov 22, 2019</p>
+  <article class="content">
+    <h2 id="ST-MVL-遥感时序数据插值"><a href="#ST-MVL-遥感时序数据插值" class="headerlink" title="ST-MVL 遥感时序数据插值"></a>ST-MVL 遥感时序数据插值</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Spatio-temporal multiview-based learning method 基于时空多视图的学习方法</p>
+<p>考虑：</p>
+<ol>
+<li>同一时序数据中不同时间戳的读数之间的时间相关性</li>
+<li>不同时序数据之间的空间相关性</li>
+</ol>
+<p>结合了：</p>
+<ol>
+<li>由反距离加权插值和简单指数平滑组成的经验统计模型</li>
+<li>特定的数据驱动算法</li>
+</ol>
+<p><strong>NMF</strong> 非负矩阵分解</p>
+<p>block missing是极端情况</p>
+<p><strong>ST-MVL</strong>的核心就是四种算法结合，如下图</p>
+<p><img src="ST-MVL.png" alt="ST-MVL"></p>
+<p><strong>SES</strong> 简单的指数平滑，根据同一传感器的其他时间戳的读数来做估计，属于global temporal view</p>
+<p><strong>IDW</strong> 反距离加权插值，根据空间领域的读数来做估计，属于global spatial view</p>
+<p><strong>UCF</strong> 基于用户（指的是传感器），根据传感器最近的读数和空间领域中相近的传感器的读数之间的相似性来估计，属于local spatial view</p>
+<p><strong>ICF</strong> 基于不同时间戳的最近读数之间的相似性来做估计，属于local temporal view</p>
+<h3 id="IDW-反距离加权插值"><a href="#IDW-反距离加权插值" class="headerlink" title="IDW 反距离加权插值"></a>IDW 反距离加权插值</h3><p><img src="IDW.png" alt="IDW"></p>
+<p>di是sensor si和目标sensor之间的距离，α是自定义的幂权重</p>
+<p><strong>the First Law of Geography</strong>:   Everything is related to everything else, but near things are more related than distant things （距离越近越相关）</p>
+<h3 id="SES-指数平滑"><a href="#SES-指数平滑" class="headerlink" title="SES 指数平滑"></a>SES 指数平滑</h3><p><img src="SES.png" alt="SES"></p>
+<p>tj是目标读数和当前读数之间的时间间隔，β是自定义的(0,1)区间内的平滑参数</p>
+<p>时间越近越相关</p>
+<h3 id="UCF-user-based-collaborative-filtering"><a href="#UCF-user-based-collaborative-filtering" class="headerlink" title="UCF user-based collaborative filtering"></a>UCF user-based collaborative filtering</h3><p>建立一个local data matrix，大小为N*ω（N为sensor数量，ω是自定的size，筛出前后的时间戳）</p>
+<p>![local data matrix](local data matrix.png)</p>
+<p>于是sensor之间的相似度可以这样定义：（NT是两个sensor都有读数的时间戳个数）</p>
+<p><img src="sim.png" alt="sim"></p>
+<p>然后就可以估计：</p>
+<p><img src="UCF.png" alt="UCF"></p>
+<h3 id="ICF-item-based-collaborative-filtering"><a href="#ICF-item-based-collaborative-filtering" class="headerlink" title="ICF item-based collaborative filtering"></a>ICF item-based collaborative filtering</h3><p>同样的local data matrix，算时间戳之间的相似度（NS是两个时间戳都有读书的sensor个数）</p>
+<p><img src="simt.png" alt="simt"></p>
+<p>然后就可以估计：</p>
+<p><img src="ICF.png" alt="ICF"></p>
+<h3 id="Multiview-Learing"><a href="#Multiview-Learing" class="headerlink" title="Multiview Learing"></a>Multiview Learing</h3><p><img src="multiview.png" alt="multiview"></p>
+
+  </article>
+  <footer class="f-cf">
+    
+    
+      <a href="/2019/11/19/20191119/" class="link f-fr">园游会⟶</a>
+    
+  </footer>
+</section></div>
+    <footer id="footer" class="f-cf">
+  zhanght527@gmail.com
+  
+  <span class="copyright">All rights reserved @Clover Tuan</span>
+</footer>
+  </div>
+</body>
+</html>
