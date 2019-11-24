@@ -12,6 +12,10 @@
   src: url("/fonts/FZXIYSK.TTF"); }
 
 @font-face {
+  font-family: "Baskerville Old Face";
+  src: url("/fonts/BASKVILL.TTF"); }
+
+@font-face {
   font-family: '造字工房言宋体（非商用）';
   src: url("/fonts/MFYanSong_Noncommercial-Regular_0.ttf"); }
 

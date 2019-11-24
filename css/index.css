@@ -30,6 +30,10 @@ body {
   src: url("/fonts/MaturaMTScriptCapitals.ttf"); }
 
 @font-face {
+  font-family: "Book Antiqua";
+  src: url("/fonts/BKANT.ttf"), url("/fonts/ANTQUAI.TTF"), url("/fonts/ANTQUABI.TTF"), url("/fonts/ANTQUAB.TTF"); }
+
+@font-face {
   font-family: "方正细雅宋_GBK";
   src: url("/fonts/FZXIYSK.TTF"); }
 
@@ -86,7 +90,7 @@ body {
       font-size: 45px;
       line-height: 53px;
       color: #333;
-      font-family: Constantia; }
+      font-family: "Book Antiqua"; }
       #nav > .header > .title:hover {
         opacity: .7; }
   #nav > .ctnWrap {
@@ -102,7 +106,7 @@ body {
           text-align: center;
           margin-top: 10px; } }
   #nav .nav-menu {
-    font-family: Constantia;
+    font-family: "Book Antiqua";
     font-size: 20px;
     line-height: 24px;
     color: #333;
@@ -138,7 +142,7 @@ body {
 #footer {
   margin-top: 80px;
   font-size: 14px;
-  font-family: "Constantia","方正细雅宋_GBK";
+  font-family: "Book Antiqua","方正细雅宋_GBK";
   line-height: 22px;
   opacity: 0.8;
   color: #333; }
@@ -182,7 +186,7 @@ body {
   .project-card > .ctnWrap {
     flex: 1; }
     .project-card > .ctnWrap > .title {
-      font-family: "Constantia","造字工房言宋体（非商用）";
+      font-family: "Book Antiqua","造字工房言宋体（非商用）";
       font-weight: 600;
       font-size: 28px;
       line-height: 40px; }
@@ -190,13 +194,13 @@ body {
         opacity: 1;
         color: #855B32; }
     .project-card > .ctnWrap > .desc {
-      font-family: Constantia;
+      font-family: "Book Antiqua";
       font-size: 16px;
       line-height: 30px;
       margin-top: 20px;
       margin-bottom: 15px; }
     .project-card > .ctnWrap > .sub {
-      font-family: Constantia;
+      font-family: "Book Antiqua";
       font-size: 16px;
       line-height: 30px;
       opacity: .5; }
@@ -242,14 +246,14 @@ body {
   background-color: white;
   color: #333;
   font-size: 16px;
-  font-family: "Constantia", "方正细雅宋_GBK";
+  font-family: "Book Antiqua", "方正书宋简体";
   line-height: 30px; }
   .article > .title {
     font-size: 28px;
     line-height: 40px;
     margin-bottom: 10px;
     font-weight: 600;
-    font-family: "Constantia","造字工房言宋体（非商用）"; }
+    font-family: "Book Antiqua","造字工房言宋体（非商用）"; }
   .article > .sub {
     opacity: .5;
     margin-bottom: 20px; }
@@ -259,7 +263,8 @@ body {
       font-size: 24px;
       font-weight: 600;
       line-height: 40px;
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      font-family: "Book Antiqua","造字工房言宋体（非商用）"; }
     .article > .content p {
       font-size: 17px;
       line-height: 30px;
@@ -364,7 +369,7 @@ body {
 .archive {
   padding: 80px 160px;
   background-color: whitesmoke;
-  font-family: "Constantia","造字工房言宋体（非商用）"; }
+  font-family: "Book Antiqua","造字工房言宋体（非商用）"; }
   @media screen and (max-width: 600px) {
     .archive {
       padding: 20px; } }
