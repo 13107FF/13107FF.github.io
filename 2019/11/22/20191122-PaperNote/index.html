@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   
-  <title>【可视化Task1】论文阅读*3 | PHOSPHENE</title>
+  <title>【可视化Task1】论文阅读 | PHOSPHENE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="ST-MVL 遥感时序数据插值OverviewSpatio-temporal multiview-based learning method 基于时空多视图的学习方法 考虑：  同一时序数据中不同时间戳的读数之间的时间相关性 不同时序数据之间的空间相关性  结合了：  由反距离加权插值和简单指数平滑组成的经验统计模型 特定的数据驱动算法  NMF 非负矩阵分解 block missing是极端情况">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【可视化Task1】论文阅读*3">
+<meta property="og:title" content="【可视化Task1】论文阅读">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;index.html">
 <meta property="og:site_name" content="PHOSPHENE">
 <meta property="og:description" content="ST-MVL 遥感时序数据插值OverviewSpatio-temporal multiview-based learning method 基于时空多视图的学习方法 考虑：  同一时序数据中不同时间戳的读数之间的时间相关性 不同时序数据之间的空间相关性  结合了：  由反距离加权插值和简单指数平滑组成的经验统计模型 特定的数据驱动算法  NMF 非负矩阵分解 block missing是极端情况">
@@ -20,7 +20,7 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;simt.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;ICF.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;multiview.png">
-<meta property="og:updated_time" content="2019-11-22T03:22:26.295Z">
+<meta property="og:updated_time" content="2019-11-24T15:01:15.577Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;ST-MVL.png">
   
@@ -70,7 +70,7 @@
   </div>
 </nav>
     <div id="main"><section class="article">
-  <h2 class="title">【可视化Task1】论文阅读*3</h2>
+  <h2 class="title">【可视化Task1】论文阅读</h2>
   <p class="sub">Nov 22, 2019</p>
   <article class="content">
     <h2 id="ST-MVL-遥感时序数据插值"><a href="#ST-MVL-遥感时序数据插值" class="headerlink" title="ST-MVL 遥感时序数据插值"></a>ST-MVL 遥感时序数据插值</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Spatio-temporal multiview-based learning method 基于时空多视图的学习方法</p>
@@ -109,9 +109,36 @@
 <p>然后就可以估计：</p>
 <p><img src="ICF.png" alt="ICF"></p>
 <h3 id="Multiview-Learing"><a href="#Multiview-Learing" class="headerlink" title="Multiview Learing"></a>Multiview Learing</h3><p><img src="multiview.png" alt="multiview"></p>
+<h2 id="单变量时序数据插值（Visually-amp-statistically-guided）"><a href="#单变量时序数据插值（Visually-amp-statistically-guided）" class="headerlink" title="单变量时序数据插值（Visually &amp; statistically guided）"></a>单变量时序数据插值（Visually &amp; statistically guided）</h2><p>整体思想是用某种估算方法对缺失值进行插值，然后通过可视化界面来给予视觉上的和统计上的反馈，让人可以交互式地调整插值结果。</p>
+<p><strong>cycle plot</strong> 周期图，x轴每增加一个步长，都会循环往复出现一组值</p>
+<p>Fig.1中，(a)图就是以年份为横轴，每年都有12个月的取值。(b)图以月份为横轴，每月都有14年的取值</p>
+<p><strong>插值方法参考：</strong> </p>
+<ol>
+<li><p>N. Horton and K. Kleinman. Much ado about nothing: A comparison<br>of missing data methods and software to fit incomplete data regression<br>models. The American Statistician, 61(1):79–90, 2007.</p>
+</li>
+<li><p>S. van Burren. Flexible Imputation of Missing Data. Chapman and<br>Hall/CRC, Boca Raton, USA, 2012.</p>
+</li>
+</ol>
+<p>当悬停/选择一个视图中的点时，相应的点将在另一个视图中高亮显示。悬停/选择表示月平均值的周期图中的水平条将在线性时间序列视图中突出显示此部分季节的所有点。</p>
+<p>主要是提供一种可视化的方式，能够人为控制插值的效果，并且很直观。</p>
+<h2 id="多变量时序数据插值（可视化交互）"><a href="#多变量时序数据插值（可视化交互）" class="headerlink" title="多变量时序数据插值（可视化交互）"></a>多变量时序数据插值（可视化交互）</h2><p><strong>PP</strong> data pre-processing 数据预处理</p>
+<p><strong>MVTS</strong> multivariate time series data 多变量时序数据</p>
+<p>值域的维度使得MVTS特别难以处理、可视化和分析。随着维度的增加，分析员很难评估和比较例程对单个维度的影响。</p>
+<p>数据预处理可以主要分类为data cleansing &amp; data reduction</p>
+<h3 id="data-cleansing-data-wrangling"><a href="#data-cleansing-data-wrangling" class="headerlink" title="data cleansing (data wrangling)"></a>data cleansing (data wrangling)</h3><p>如何定义clean data？从问题域到决策域的投射。</p>
+<p>关于缺失值的检测和处理：线性和自适应插值，回归。</p>
+<p>关于异常值的处理：降噪</p>
+<h3 id="data-reduction"><a href="#data-reduction" class="headerlink" title="data reduction"></a>data reduction</h3><p>主要是采样和过滤。根据预定标准减少不相关信息，只保留相关有用信息。</p>
+<h3 id="关于多变量时序数据的视觉分析"><a href="#关于多变量时序数据的视觉分析" class="headerlink" title="关于多变量时序数据的视觉分析"></a>关于多变量时序数据的视觉分析</h3><ol>
+<li><em>small multiples</em> 将单个维度并列到具有共享x轴(时间)的图表列表，垂直显示空间通常限制可以同时显示的维度数</li>
+<li><em>shared-space</em> 使用堆叠的方法。适用于y轴跨度较小的情景。将高维数据降维。</li>
+</ol>
+<h3 id="approach"><a href="#approach" class="headerlink" title="approach"></a>approach</h3><p>主要是提供一个可视化界面，可以自主创建PP pipelines for MVTS</p>
 
   </article>
   <footer class="f-cf">
+    
+      <a href="/2019/11/24/%E5%8F%AF%E8%A7%86%E5%8C%96HW1-%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" class="link f-fl">⟵可视化HW1-案例分析《GOV|DNA》</a>
     
     
       <a href="/2019/11/19/20191119/" class="link f-fr">园游会⟶</a>
