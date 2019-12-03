@@ -20,7 +20,7 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;simt.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;ICF.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;multiview.png">
-<meta property="og:updated_time" content="2019-11-24T16:50:54.872Z">
+<meta property="og:updated_time" content="2019-11-25T12:38:33.098Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;20191122-PaperNote&#x2F;ST-MVL.png">
   
@@ -132,8 +132,14 @@
 <h3 id="关于多变量时序数据的视觉分析"><a href="#关于多变量时序数据的视觉分析" class="headerlink" title="关于多变量时序数据的视觉分析"></a>关于多变量时序数据的视觉分析</h3><ol>
 <li><em>small multiples</em> 将单个维度并列到具有共享x轴(时间)的图表列表，垂直显示空间通常限制可以同时显示的维度数</li>
 <li><em>shared-space</em> 使用堆叠的方法。适用于y轴跨度较小的情景。将高维数据降维。</li>
+<li>将不确定性描述为MVTS的每个维度的附加维度</li>
 </ol>
-<h3 id="approach"><a href="#approach" class="headerlink" title="approach"></a>approach</h3><p>主要是提供一个可视化界面，可以自主创建PP pipelines for MVTS</p>
+<h3 id="approach"><a href="#approach" class="headerlink" title="approach"></a>approach</h3><p>主要是提供一个可视化界面，可以自主创建PP pipelines for MVTS。</p>
+<p>fig.3 左边是输入处理，右边是输出结果，并列显示了MVTS的七个维度的并列和降维的视觉表示。三种颜色（蓝色灰色橙色）是三种不同参数化的视觉比较。最下面的box plot 是不确定性的可视化<br>$$<br>T_{C} →Creation.创造可视化界面，执行pipeline。\<br>T_{R} →Routine.单个Routine的效果评估。\<br>T_{P} →Parameters.替换参数带来的影响。\<br>T_{D} →Dimensions.输出不同维度的可分析。\<br>T_{U} →Uncertainty.关于不确定度。\<br>T_{O} →Overview.整个pipeline中的Routine效果评估。\<br>$$</p>
+<h4 id="T-R"><a href="#T-R" class="headerlink" title="T_{R}"></a>T_{R}</h4><p>同时显示输入和输出（Fig4.A）要有足够的显示空间</p>
+<p>大型单一显示器中多个维度的叠加（Fig4.B） 编码各个维度的可区分颜色的数量会限制</p>
+<p>值域的归一化：维度缩减</p>
+<p><strong>Ours</strong>  并列显示，这样不需要用颜色区分维度，可以保留用于区分参数比较。还用了降维（？</p>
 
   </article>
   <footer class="f-cf">
